@@ -1,1 +1,134 @@
 
+body {
+  color: white;
+  background-color: #000000;
+  font-size: 16px;
+}
+
+.lol {
+  background-image: url("https://sheol.neocities.org/city2.gif");
+  background-repeat: repeat;
+  padding-right: 51px;
+  padding-left: 51px;
+  padding-bottom: 48px;
+  margin-right: 10px;
+  margin-bottom: 6px;
+/*  border-width: 1px;
+  border-color: white;
+  border-style: inset;*/
+}
+
+.lol:hover{
+  background-image: url(https://sheol.neocities.org/aaa.webp);
+}
+
+
+table, th, td {
+  border: 1px /*solid*/;
+  border-collapse: collapse;
+  border-color: whitesmoke;
+  vertical-align: top;
+}
+
+td{
+  width: 300px;
+  height: 100px;
+}
+
+h2{
+
+}
+
+.tegxt{
+margin-left: 10px;
+margin-top: -20px;
+}
+
+a{
+  text-decoration-line: none;
+  color: #4d4de6;
+}
+
+a:hover{
+  text-decoration-line: underline;
+}
+
+.start {
+
+text-align: center;
+margin: 150px;
+border: double;
+
+}
+
+    .awesome {
+      
+
+      
+      width:100%;
+      
+      margin: 0 auto;
+      text-align: left;
+      
+      color:#313131;
+      font-size:15px;
+      -webkit-animation:colorchange 20s infinite alternate;
+      
+      
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+        
+        color: red;
+      }
+      
+      10% {
+        
+        color: #8e44ad;
+      }
+      
+      20% {
+        
+        color: #ff44ff;
+      }
+      
+      30% {
+        
+        color: darkseagreen;
+      }
+      
+      40% {
+        
+        color: turquoise;
+      }
+      
+      50% {
+        
+        color: limegreen;
+      }
+      
+      60% {
+        
+        color: blue;
+      }
+      
+      70% {
+        
+        color: #2980b9;
+      }
+      80% {
+     
+        color: #f1c40f;
+      }
+      
+      90% {
+     
+        color: indianred;
+      }
+      
+      100% {
+        
+        color: mediumvioletred;
+      }
+    }
