@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>resources</title>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5552cb82-6fb8-4c7f-9d29-a10b2e5daf6c/dchz3fr-cc539baf-6cdc-4f11-aca6-dc7ed666d1ec.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU1NTJjYjgyLTZmYjgtNGM3Zi05ZDI5LWExMGIyZTVkYWY2Y1wvZGNoejNmci1jYzUzOWJhZi02Y2RjLTRmMTEtYWNhNi1kYzdlZDY2NmQxZWMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yqWomc8DEeqggtosbkg6uel8gQqPmqlSRn295reoRnU">
+	
+</head>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<p align="left">
+	
+
+          tool:<br/><br/>
+
+https://invidious.io                -aggregator for invidious instances<br/>
+https://searx.space                 -aggregator for searx instances<br/>
+https://wiby.me                     -aggregator for unpopular websites<br/> 
+https://labgopher.com               -aggregator for us ebay server prices <br/>
+https://diskprices.com              -aggregator for amazon hard drive prices<br/>
+https://www.cloud-mercato.com       -aggregator for datacenter prices<br/>
+https://spidr.today                 -aggregator for global news<br/>
+https://plantnet.org                -aggregator for gardening<br/>
+https://www.omio.com                -aggregator for transit<br/>
+https://shiptracker.live            -aggregator for ship traffic<br/>
+https://www.shodan.io               -aggregator for internet<br/>
+https://www.zoomeye.org             -aggregator for internet<br/>
+https://nullschool.net              -aggregator for wind<br/>
+https://www.wigle.net               -aggregator for wireless networks<br/>
+https://oec.world                   -aggregator for global trade<br/>
+https://rateyourmusic.com           -aggregator for music<br/>
+https://www.discogs.com             -aggregator for music<br/>
+https://searchcode.com              -aggregator for source code<br/>
+https://www.ebi.ac.uk               -aggregator for biology<br/>
+https://www.stlfinder.com           -aggregator for 3d models<br/>
+https://alternativeto.net           -aggregator for software<br/>
+https://octopart.com                -aggregator for electronics<br/><br/>
+
+https://wikiless.org                -frontend for wikipedia<br/>
+https://nitter.net                  -frontend for twitter<br/>
+https://r.nf                        -frontend for reddit<br/>
+https://predb.me                    -frontend for limetorrents<br/>
+<br/>
+https://www.gnoosic.com             -find similar music<br/>
+https://www.music-map.com           -find similar music<br/>
+https://www.deepl.com               -translator<br/>
+https://translated.com              -translator<br/>
+https://www.fakenamegenerator.com   -generate personal data<br/>
+https://elfqrin.com                 -generate personal data, test browser security<br/>
+https://www.engineeringtoolbox.com  -tools for everything<br/>
+https://catbox.moe                  -temporary file host<br/>
+http://www.lullar.com               -search for social media accounts<br/>
+---------------------<br/><br/>
+
+data:<br/><br/>
+
+https://archive.org                 -archive for everything<br/>
+https://slowfoodusa.org             -archive for recipes<br/>
+https://ocw.mit.edu                 -archive for mit courses<br/>
+https://davesgarden.com             -archive for gardening<br/>
+https://www.ibiblio.org             -archive for everything<br/>
+https://arxiv.org                   -archive for articles<br/>
+https://openfarm.cc                 -archive for gardening<br/>
+https://wiki.archlinux.org          -archive for (arch)linux documentation<br/>
+https://www.manualslib.com          -archive for manuals<br/>
+https://www.backblaze.com           -archive for hard drive statistics<br/>
+https://arthive.com                 -archive for art<br/>
+https://www.w3schools.com           -archive for programming courses<br/>
+https://batteryuniversity.com       -archive for battery technologies<br/>
+https://repair.wiki                 -archive for electronics repair<br/>
+https://eldritchdata.neocities.org  -archive for cute things<br/>
+https://ncatlab.org                 -archive for math, physics, philosophy<br/>
+https://www.tradepub.com            -archive for corporate reading<br/>
+https://wiki.osdev.org              -archive for operating system development<br/>
+https://mast.stsci.edu              -archive for astronomy<br/>
+https://libgen.rocks                -archive for books, articles<br/>
+https://libgen.is/                  -archive for books, articles v.2 <br/>
+http://www.doshaven.eu              -archive for dos games<br/>
+https://www.asciiart.eu             -archive for ascii art<br/>
+https://www.flaticon.com            -archive for vector icons<br/>
+https://wikichip.org                -archive for computer engineering<br/>
+http://dotshare.it                  -archive for software rices<br/>
+https://hyperpolyglot.org           -archive for software development<br/>
+https://sandpile.org                -archive for x86 development<br/>
+https://www.mooc.fi                 -archive for computer science courses<br/>
+https://cliki.net                   -archive for common lisp development<br/>
+https://desuarchive.org/            -archive for 4chan blue boards <br/>
+http://archiveofsins.com/           -archive for 4chan nsfw boards <br/>
+http://classcentral.com<br/>
+http://obscuritydirectory.neocities.org<br/>
+http://demonoid.is<br/>
+http://worldfloraonline.org<br/>
+http://ifixit.com<br/>
+http://developer.ibm.com<br/>
+http://myfixguide.com<br/>
+http://gsmarena.com<br/>
+http://sci-hub.se<br/>
+http://thenounproject.com<br/>
+http://iconfinder.com<br/>
+http://troubleshooters.com<br/>
+http://design-reuse.com<br/>
+http://forum.doom9.org<br/>
+http://breached.vc<br/>
+http://devdocs.io<br/>
+http://semiwiki.com<br/>
+http://mans.io<br/>
+http://ourworldindata.org<br/>
+http://vimm.net<br/>
+http://gametechwiki.com<br/>
+http://adb.arcadeitalia.net<br/>
+http://freeware.iconfactory.com<br/>
+http://addgene.org<br/>
+http://openclipart.org<br/>
+http://logi.wiki<br/>
+http://gadget-manual.com<br/>
+http://academicearth.org<br/>
+https://vinafix.com<br/>
+http://www.bioscentral.com<br/>
+https://worldradiohistory.com<br/>
+https://www.repairlap.com<br/>
+https://wiibrew.org<br/>
+https://www.biorxiv.org<br/>
+https://encyclopedia.pub<br/>
+https://hell.sh<br/>
+---------------<br/>
+<br/><br/>
+
+</p>
+</body>
+</html>
