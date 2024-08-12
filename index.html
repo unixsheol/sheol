@@ -1,14 +1,31 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>SHEOL</title>
-	<meta charset="utf-8" >
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5552cb82-6fb8-4c7f-9d29-a10b2e5daf6c/dchz3fr-cc539baf-6cdc-4f11-aca6-dc7ed666d1ec.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU1NTJjYjgyLTZmYjgtNGM3Zi05ZDI5LWExMGIyZTVkYWY2Y1wvZGNoejNmci1jYzUzOWJhZi02Y2RjLTRmMTEtYWNhNi1kYzdlZDY2NmQxZWMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yqWomc8DEeqggtosbkg6uel8gQqPmqlSRn295reoRnU">
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sheol</title>
+    <link rel="icon" type="image/x-icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5552cb82-6fb8-4c7f-9d29-a10b2e5daf6c/dchz3fr-cc539baf-6cdc-4f11-aca6-dc7ed666d1ec.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU1NTJjYjgyLTZmYjgtNGM3Zi05ZDI5LWExMGIyZTVkYWY2Y1wvZGNoejNmci1jYzUzOWJhZi02Y2RjLTRmMTEtYWNhNi1kYzdlZDY2NmQxZWMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yqWomc8DEeqggtosbkg6uel8gQqPmqlSRn295reoRnU">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 20px;
+        }
+        #countdown {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #days-left {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
 </head>
-
+<body>
 
 <br/>
 <br/>
@@ -23,15 +40,68 @@
 
 <p align="center">
 	<i>
-
             I fail to get even the attention of the mass. I should suit them better if I suited myself less.<br/> 
 			I feel that the public demand an average man,--average thoughts and manners,--not originality, nor even absolute excellence.<br/> 
 			 You cannot interest them except as you are like them and sympathize with them. <br/> 
 			 I would rather that my audience come to me than that I should go to them, and so they be sifted;  <br/>
 		<br/>
 		<br/>
+	</i>
+</p>
 
-</i></p>
-	<p align="left">  <a href="resources.html">resources</a> 
+<!-- countdown timer <3 -->
+<div id="countdown">00:00:00</div>
+<div id="days-left">there are 0 days left.</div>
+
+
+
+
+
+<p align="left"> <a href="resources.html">resources</a> </p>
+<p align="left"> <a href="entries.html">entries</a> </p>
+
+
+contact me <br/>
+sheoldigita@proton.me <br/>
+xmpp -> coming soon 
+
+
+
+
+
+
+<script>
+    // countdown date
+    var countDownDate = new Date(new Date().getTime() + 14 * 24 * 60 * 60 * 1000).getTime();
+
+    // 1 sec tick 
+    var x = setInterval(function() {
+        // todays date and time
+        var now = new Date().getTime();
+        
+        // distance between now n countdown date
+        var distance = countDownDate - now;
+        
+        // day/hr/min/sec
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // display element id="countdown"
+        document.getElementById("countdown").innerHTML = (days * 24 + hours) + ":" + minutes.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + ":" + seconds.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+        
+        // days left id="days-left"
+        document.getElementById("days-left").innerHTML = "there are " + days + " days left.";
+        
+        // ending msg
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+            document.getElementById("days-left").innerHTML = "your time is up.";
+        }
+    }, 1000);
+</script>
+
 </body>
 </html>
