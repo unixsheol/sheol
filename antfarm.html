@@ -15,9 +15,11 @@
             color: #333;
             margin: 0;
             height: 100vh;
+            position: relative;
         }
 
         #ca-container {
+            position: relative;
             display: grid;
             grid-template-columns: repeat(25, 20px); /* Larger cells */
             grid-template-rows: repeat(25, 20px); /* Larger cells */
@@ -42,21 +44,67 @@
             line-height: 1.6;
             font-size: 1rem;
         }
+
+        #hover-text {
+            font-size: 0.9rem;
+            color: #666; /* Slightly lighter gray */
+            font-style: italic;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Top left text */
+        #top-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #top-left h1 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        #top-left a {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: #666;
+            text-decoration: none;
+        }
+
+        #top-left a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <div id="top-left">
+        <h1>ants are so cute ><</h1>
+        <a href="index.html">i want to go home..</a>
+    </div>
+
     <div id="ca-container"></div>
+
     <p>
        cellular automata (ca), a discrete model consisting of a grid of cells, each in one of a finite number of states, evolve in synchrony according to a set of localised rules. 
         each cell’s state in the next generation is determined by the current states of its neighboring cells. 
-        the dynamics of ca, driven by deterministic or probabilistic transitions, manifest behavior that distorts the percieved simplicity of its foundational rules. 
+        the dynamics of ca, driven by deterministic or probabilistic transitions, manifest behavior that distorts the perceived simplicity of its foundational rules. 
         patterns become from initial configurations. either stable structures, defunct chaos, or perpetually mindless cyclical oscillations. that is to say, infinitely trapped.  
         it may be forever. it may cease completely. we observe minute, localised processes become self-organizing systems; living and breathing.  
         we become the micro and the macro. the simple and the complex. the known and the unknown.
     </p>
 
+    <div id="hover-text">
+        any live cell with fewer than two live neighbours dies, as if by isolation.<br>
+        any live cell with two or three live neighbours lives on to the next generation.<br>
+        any live cell with more than three live neighbours dies, as if by overpopulation.<br>
+        any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+    </div>
+
     <script>
         const container = document.getElementById('ca-container');
+        const hoverText = document.getElementById('hover-text');
         const gridSize = 25; /* Smaller grid size due to larger cells */
         let grid = [];
 
@@ -129,6 +177,14 @@
                 }
             }
         }
+
+        container.addEventListener('mouseover', () => {
+            hoverText.style.opacity = 1;
+        });
+
+        container.addEventListener('mouseout', () => {
+            hoverText.style.opacity = 0;
+        });
 
         randomizeGrid();
         setInterval(nextGeneration, 200);
