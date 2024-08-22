@@ -102,6 +102,25 @@ xmpp | sheol@07f.de
         }
     }, 1000);
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        fetch('https://script.google.com/macros/s/AKfycbzPezoeacRzwrGN8LJjL3BkNHqeSq0XcVHjsdaIEXaKikrsOpM2SrDWi4_NaZts0mG9/exec', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            url: this.href,
+            userAgent: navigator.userAgent,
+            referrer: document.referrer
+          })
+        });
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
