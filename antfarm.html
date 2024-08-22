@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cellular Automata Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white; /* Pure white background */
+            color: #333;
+            margin: 0;
+            height: 100vh;
+        }
+
+        #ca-container {
+            display: grid;
+            grid-template-columns: repeat(25, 20px); /* Larger cells */
+            grid-template-rows: repeat(25, 20px); /* Larger cells */
+            gap: 0px; /* No gap between cells */
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            width: 20px; /* Increased cell size */
+            height: 20px; /* Increased cell size */
+            background-color: white; /* Cell background is pure white */
+            border: none; /* No borders on cells */
+        }
+
+        .alive {
+            background-color: black; /* Alive cells are black */
+        }
+
+        p {
+            max-width: 800px;
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="ca-container"></div>
+    <p>
+       cellular automata (ca), a discrete model consisting of a grid of cells, each in one of a finite number of states, evolve in synchrony according to a set of local rules. each cell’s state in the next generation is determined by the current states of its neighboring cells. the dynamics of ca, driven by deterministic or probabilistic transitions, manifest behavior that distorts the percieved simplicity of its foundational rules. patterns emerge from initial configurations, some leading to stable structures, defunct chaos, or perpetually mindless cyclical oscillations. it may be forever. it may stop completely. understand how localised processes give rise to self-organizing systems. like ants in their farm. understand the micro and the macro. the simple and the complex. the known and the unknown.
+    </p>
+
+    <script>
+        const container = document.getElementById('ca-container');
+        const gridSize = 25; /* Smaller grid size due to larger cells */
+        let grid = [];
+
+        // Initialize the grid with dead cells
+        for (let i = 0; i < gridSize; i++) {
+            grid[i] = [];
+            for (let j = 0; j < gridSize; j++) {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                container.appendChild(cell);
+                grid[i][j] = cell;
+            }
+        }
+
+        // Randomize initial state
+        function randomizeGrid() {
+            for (let i = 0; i < gridSize; i++) {
+                for (let j = 0; j < gridSize; j++) {
+                    if (Math.random() > 0.8) {
+                        grid[i][j].classList.add('alive');
+                    }
+                }
+            }
+        }
+
+        // Get the next state of the grid
+        function nextGeneration() {
+            let newGrid = [];
+            for (let i = 0; i < gridSize; i++) {
+                newGrid[i] = [];
+                for (let j = 0; j < gridSize; j++) {
+                    let aliveNeighbors = 0;
+                    for (let x = -1; x <= 1; x++) {
+                        for (let y = -1; y <= 1; y++) {
+                            if (x === 0 && y === 0) continue;
+                            const ni = i + x;
+                            const nj = j + y;
+                            if (ni >= 0 && nj >= 0 && ni < gridSize && nj < gridSize) {
+                                if (grid[ni][nj].classList.contains('alive')) {
+                                    aliveNeighbors++;
+                                }
+                            }
+                        }
+                    }
+
+                    if (grid[i][j].classList.contains('alive')) {
+                        if (aliveNeighbors < 2 || aliveNeighbors > 3) {
+                            newGrid[i][j] = false;
+                        } else {
+                            newGrid[i][j] = true;
+                        }
+                    } else {
+                        if (aliveNeighbors === 3) {
+                            newGrid[i][j] = true;
+                        } else {
+                            newGrid[i][j] = false;
+                        }
+                    }
+                }
+            }
+
+            // Update grid
+            for (let i = 0; i < gridSize; i++) {
+                for (let j = 0; j < gridSize; j++) {
+                    if (newGrid[i][j]) {
+                        grid[i][j].classList.add('alive');
+                    } else {
+                        grid[i][j].classList.remove('alive');
+                    }
+                }
+            }
+        }
+
+        randomizeGrid();
+        setInterval(nextGeneration, 200);
+    </script>
+</body>
+</html>
